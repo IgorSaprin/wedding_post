@@ -1,0 +1,119 @@
+@keyframes unblur {
+  from {
+    filter: blur(15px);
+    transform: scale(1.1);
+  }
+  to {
+    filter: blur(0px);
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Смещение вниз на 20px */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px); /* Смещение вверх на 20px */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.heroBackground{
+  overflow: hidden; /* Важно: чтобы размытые края не выходили за пределы экрана */
+  animation: unblur 2s ease-out forwards; /* Длительность 2 секунды для плавности  */
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Распределяет элементы: первый в топ, последний в низ */
+  align-items: center;
+  text-align: center;
+  padding: 4vh 4vw 1vh; /* Отступы сверху/снизу и по бокам */
+  box-sizing: border-box;
+}
+
+.heroHeader {
+  animation: fadeInDown 1.2s ease-out 1.2s forwards;
+  opacity: 0;
+}
+
+.heroFooter {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* Расстояние между локацией и таймером */
+  margin-bottom: 2vh; /* Небольшой отступ от самого низа */
+
+  animation: fadeInUp 1.2s ease-out 1.2s forwards; /* Задержка 1.2 сек */
+  opacity: 0;
+}
+
+/* Контейнер подсказки */
+.scrollIndicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+  gap: 5px;
+  opacity: 0.8;
+  /* Анимация появления самой подсказки вместе с футером */
+  animation: fadeIn 2s ease-in;
+}
+
+.scrollIndicator span {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff;
+  font-weight: 300;
+}
+
+/* Сама стрелка (уголок) */
+.arrow {
+  width: 15px;
+  height: 15px;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  transform: rotate(45deg); /* Поворачиваем, чтобы получился уголок вниз */
+  animation: bounceArrow 2s infinite;
+}
+
+/* Анимация прыжка */
+@keyframes bounceArrow {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0) rotate(45deg);
+  }
+  40% {
+    transform: translateY(-8px) rotate(45deg);
+  }
+  60% {
+    transform: translateY(-4px) rotate(45deg);
+  }
+}
+
+/* Плавное появление текста подсказки */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.8;
+  }
+}

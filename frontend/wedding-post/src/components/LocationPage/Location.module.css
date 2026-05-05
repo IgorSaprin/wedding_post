@@ -1,0 +1,72 @@
+.locationMapWrapper {
+  width: 100%;
+  margin: 15px 0;
+}
+
+.mapContainer {
+  width: 100%;
+  height: 250px;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.fadeIn {
+  animation: fadeInKeyframes 0.5s ease-out forwards;
+}
+
+@keyframes fadeInKeyframes {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Стили для кнопок, если нужно переопределить Mantine */
+.btnText {
+  font-family: "Cormorant Infant", serif;
+  font-size: 1.1rem;
+}
+
+
+.howToGetContent {
+  text-align: left;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 15px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.publicTransportItem {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.publicTransportItem:last-child {
+  border-bottom: none;
+}
+
+.locationWrapper {
+  overflow: hidden; /* Важно: сама страница не должна скроллиться */
+}
+.locationSection {
+  width: 100%;
+  max-width: 500px;
+  max-height: 90dvh; /* Ограничиваем высоту карточки, чтобы она не упиралась в края */
+  text-align: center;
+
+  /* Включаем внутренний скролл */
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden; /* Запрещаем горизонтальный скролл */
+  scrollbar-width: none; /* Скрываем скроллбар в Firefox */
+}
+.locationSection::-webkit-scrollbar {
+  display: none; /* Скрываем скроллбар в Chrome/Safari */
+}

@@ -1,0 +1,30 @@
+.countdown-container {
+  font-family: "Cormorant Infant", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  display: flex;
+  gap: 1.5vw;
+  color: #ffffff;
+  justify-content: space-evenly;
+}
+
+.time-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.value {
+  font-size: 1.5em;
+  font-weight: bolder;
+}
+
+.label {
+  margin-top: 2px;
+  font-size: 0.5em;
+  color: #ffffff; /* Цвет подписи */
+  text-align: center;
+}
+
