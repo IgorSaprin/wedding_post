@@ -7,7 +7,8 @@ import HeroPage from './components/HeroPage/HeroPage';
 import WeddingMessagePage from './components/WeddingMessagePage/WeddingMessagePage';
 import ProgramPage from './components/ProgramPage/ProgramPage'
 import LocationPage from './components/LocationPage/LocationPage';
-import DressCodeAndWish from './components/DressCodeAndWish/DressCodeAndWish';
+import DressCodeAndWish from './components/DressCodePage/DressCodePage';
+import WishPage from './components/WishPage/WishPage'
 
 
 const bounceTransition = {
@@ -54,7 +55,8 @@ const App = () => {
             { component: <WeddingMessagePage />, id: "msg" },
             { component: <ProgramPage />, id: "prog" },
             { component: <LocationPage />, id: "loc" },
-            { component: <DressCodeAndWish />, id: "final" },
+            { component: <DressCodeAndWish />, id: "dresscod" },
+            { component: <WishPage />, id: "wish" },
           ].map((item) => (
             <section key={item.id} className="snap-section">
               <motion.div {...bounceTransition} className="motion-wrapper">

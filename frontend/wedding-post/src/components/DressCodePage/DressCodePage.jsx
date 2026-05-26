@@ -3,13 +3,13 @@ import texts from "../../data/texts";
 import GlassEffect from "../GlassEffect/GlassEffect";
 import RsvpBlock from "../RsvpBlock/RsvpBlock.";
 
-export default function DressCodeAndWish() {
-  const { dressCode, wishes } = texts;
+export default function DressCode() {
+  const { dressCode } = texts;
 
   return (
     <Center h="100dvh">
       <Box p="md" maw="500px" mx="auto">
-        <Stack p="xs" ta="center">
+        <Stack p="sm" ta="center">
             <GlassEffect>
                 <Text variant="title">{dressCode.title}</Text>
                 <Text variant="message">{dressCode.description}</Text>
@@ -29,14 +29,8 @@ export default function DressCodeAndWish() {
                     </Tooltip>
                   ))}
                 </Group>
+                <Text variant="message">{dressCode.postscriptum}</Text>
             </GlassEffect>
-            <GlassEffect>
-                <Text variant="title">{wishes.title}</Text>
-                <Text variant="message">{wishes.description}</Text>
-                <Text variant="label" mt={10}>{wishes.details?.[0]?.title}</Text>                
-                <Text variant="message" style={{ whiteSpace: 'pre-line' }}>{wishes.details?.[0]?.text}</Text>
-            </GlassEffect>
-            <RsvpBlock />
         </Stack>
       </Box>
     </Center>
