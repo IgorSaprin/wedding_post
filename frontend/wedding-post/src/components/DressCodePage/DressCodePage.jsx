@@ -7,9 +7,9 @@ export default function DressCode() {
   const { dressCode } = texts;
 
   return (
-    <Center h="100dvh">
+    <Center>
       <Box p="md" maw="500px" mx="auto">
-        <Stack p="sm" ta="center">
+        <Stack ta="center">
             <GlassEffect>
                 <Text variant="title">{dressCode.title}</Text>
                 <Text variant="message">{dressCode.description}</Text>

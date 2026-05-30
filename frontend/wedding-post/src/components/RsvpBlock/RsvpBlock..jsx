@@ -34,7 +34,7 @@ export default function RsvpBlock() {
             </Group>
           ) : (
             <Stack align="center" gap="xs">
-              <Text variant="message" ta="center">
+              <Text variant="message" fz="1rem" ta="center">
                 {status === "accepted"
                   ? "Рады, что вы будете с нами! Пожалуйста, пройдите опрос, это поможет нам в организации"
                   : "Жаль, что не получится встретиться."}
